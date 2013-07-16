@@ -1,0 +1,86 @@
+body {
+    margin: 0 auto;
+    position: static;    
+}
+
+.background_continer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+} 
+
+.background {
+    width: inherit;
+    height: inherit;
+    background-image: url("img/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.black {
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.content {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.content_divs {
+    width: auto;
+    padding-left: 57px;
+}
+
+.content_vertical_line {
+    width: 200px;
+    border: 2px solid white;
+    opacity: 0.1;
+}
+
+.content_about_div {
+    padding-right: 155px;
+    vertical-align:text-bottom;
+    display: inline-block;
+}
+
+.content_tech_div {
+    vertical-align:text-bottom;
+    display: inline-block;
+}
+
+.content_music_div {
+    vertical-align:text-bottom;
+    display: inline-block;
+}
+
+.content_text {
+    color: #FFFFFF;
+    font-family: monospace;
+    display: none;
+}
+
+.content_top {
+    padding-left: 80px;
+    padding-top: 90px;
+}
+
+h1 {
+    font-size: 44px;
+    font-family: "Fauna One";
+    color: #8f8f8f;
+}
+
+h2 {
+    color: #7d7e84;
+    font-family: "Fauna One";
+}
+
+h2:hover {
+    color: #a0a0a0;
+}
