@@ -34,34 +34,54 @@ body {
 
 .content_divs {
     width: auto;
+    height: 600px;
     padding-left: 57px;
+    vertical-align:text-top;
 }
 
 .content_vertical_line {
-    width: 200px;
+    display: inline-block;
+    height: 400px;
     border: 2px solid white;
+    border-radius: 2px;
     opacity: 0.1;
+    vertical-align:text-top;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
 .content_about_div {
-    padding-right: 155px;
-    vertical-align:text-bottom;
+    width: 700px;
+    height: auto;
     display: inline-block;
+    vertical-align:text-top;
 }
 
 .content_tech_div {
-    vertical-align:text-bottom;
+    width: 190px;
+    height: auto;
     display: inline-block;
+    vertical-align:text-top;    
 }
 
-.content_music_div {
-    vertical-align:text-bottom;
+.content_arts_div {
+    width: 190px;
+    height: auto;
     display: inline-block;
+    vertical-align:text-top;    
+}
+
+.content_about_div > .content_text {
+    color: #FFFFFF;
+    font-family: "Fauna One";
+    font-size: 15px;    
+    display: block;
 }
 
 .content_text {
     color: #FFFFFF;
-    font-family: monospace;
+    font-family: "Fauna One";
+    font-size: 15px;    
     display: none;
 }
 
@@ -82,5 +102,5 @@ h2 {
 }
 
 h2:hover {
-    color: #a0a0a0;
+    color: #a0a0CD;
 }
