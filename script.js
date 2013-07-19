@@ -22,27 +22,25 @@ function togelOpen(sender) {
     var currentContentTextSelector = '.' + currentlyOpened + ' > ' + '.content_text';
     var senderContentTextSelector = '.' + sender + ' > ' + '.content_text';
 
-    // open the selected one
-    var openAnimation = function() {
-        $('.' + sender).animate(
-            { width: px_open },
-            300,
-            function() {
-                $(senderContentTextSelector).fadeIn(200);
-                setAnimating(false);
-            }
-        );
-    };
-
-
     // close the currently open
     $(currentContentTextSelector).css(
         { display: "none"}
     );
+
+    // close animation
     $('.' + currentlyOpened).animate(
         {width: px_close},
+        300
+    );
+
+    // open animation
+    $('.' + sender).animate(
+        { width: px_open },
         300,
-        openAnimation
+        function() {
+            $(senderContentTextSelector).fadeIn(200);
+            setAnimating(false);
+        }
     );
 
     currentlyOpened = sender;
