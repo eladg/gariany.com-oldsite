@@ -1,4 +1,5 @@
 var currentlyOpened = 'content-about-div';
+var currentBackgroundImage = 1;
 var px_open = '690px';
 var px_close = '167px';
 
@@ -9,6 +10,46 @@ function setAnimating(state) {
     } else {
         isAnimating = false;
     }
+}
+
+function animateBackground() {
+    var currentBackgroundSelector = '.dynamic-background-' + currentBackgroundImage;
+    $(currentBackgroundSelector).animate(
+        { marginTop: -500},
+        60000,
+        "linear"
+    );
+}
+
+function changeBackground() {
+    console.log("in changeBackground");
+    var backgroundSelector = '.dynamic-background-' + currentBackgroundImage;
+
+    $(backgroundSelector).stop();
+    console.log("backgroundSelector = " + backgroundSelector);
+    // set current backgorund opacity to 0
+    $(backgroundSelector).animate(
+        { opacity: 0},
+        500
+    );
+
+    if (currentBackgroundImage == 3) {
+        currentBackgroundImage = 1;
+    } else {
+        currentBackgroundImage++;
+    }
+
+    // set current backgorund opacity to 1
+    var backgroundSelector = '.dynamic-background-' + currentBackgroundImage;
+    console.log("backgroundSelector = " + backgroundSelector);
+    $(backgroundSelector).animate(
+        { opacity: 0.7, zindex: 0},
+        500,
+        function() {
+            animateBackground();
+        }
+    );
+
 }
 
 function loadSectionDetails(section) {
@@ -25,6 +66,7 @@ function loadSectionDetails(section) {
     // ==========================================================
     var finishedAnimationBlock = function() {
         setAnimating(false);
+        changeBackground();
     };
 
     $(contentDetailsDivSelector).animate(
@@ -97,6 +139,8 @@ function toggleOpenSection(sender) {
 }
 
 $(document).ready(function() {
+
+    animateBackground();
 
     $('.content-about-div').mouseover(function() {
         toggleOpenSection('content-about-div');
