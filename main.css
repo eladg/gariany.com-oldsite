@@ -80,14 +80,14 @@ table {
 .dynamic-background-1 {
     position: absolute;
     width: 110%;
-    margin-top: -100px;
+    margin-top: -6.250em;
     opacity: 0.7;
 }
 
 .dynamic-background-2,.dynamic-background-3 {
     position: absolute;
     width: 110%;
-    margin-top: -100px;
+    margin-top: -6.250em;
     opacity: 0;
 }
 
@@ -96,13 +96,13 @@ table {
 ******************************************************************************************/
 
 .content-top {
-    margin-left: 80px;
-    margin-top: 160px;
-    margin-bottom: 100px;
+    margin-left: 5em;
+    margin-top: 10em;
+    margin-bottom: 6.25em;
 }
 
 h1 {
-    font-size: 44px;
+    font-size: 2.75em;
     font-family: "Fauna One";
     color: #8f8f8f;
 }
@@ -121,50 +121,50 @@ h1 {
 
 .content-divs {
     width: auto;
-    height: 600px;
-    padding-left: 57px;
+    height: 37.5em;
+    padding-left: 3.563em;
     vertical-align:text-top;
 }
 
 .content-vertical-line {
     display: inline-block;
-    height: 400px;
+    height: 25em;
     border: 1px dashed white;
     border-radius: 1px;
     opacity: 0.1;
     vertical-align:text-top;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin-right: 0.938em;
+    margin-left: 0.938em;
 }
 
 .content-about-div {
-    width: 690px;
+    width: 43.125em;
     height: 100%;
     display: inline-block;
     vertical-align: text-top;
 }
 
 .content-tech-div {
-    width: 157px;
+    width: 9.813em;
     height: 100%;
     display: inline-block;
     vertical-align:text-top;    
 }
 
 .content-arts-div {
-    width: 57px;
+    width: 3.563em;
     height: 100%;
     display: inline-block;
     vertical-align:text-top;    
 }
 
 h2 {
-    font-size: 28px;
+    font-size: 1.75em;
     color: #7d7e84;
     font-family: "Fauna One";
     display: inline-block;     
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 0.5em;
 }
 
 h2:hover {
@@ -183,8 +183,8 @@ p {
     color: #FFFFFF;
     width: 100%;
     font-family: "Fauna One";
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.938em;
+    line-height: 1.563em;
     position: absolute;
 }
 
