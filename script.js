@@ -30,7 +30,7 @@ function changeBackground() {
     // set current backgorund opacity to 0
     $(backgroundSelector).animate(
         { opacity: 0},
-        500
+        1500
     );
 
     if (currentBackgroundImage == 3) {
@@ -44,7 +44,7 @@ function changeBackground() {
     console.log("backgroundSelector = " + backgroundSelector);
     $(backgroundSelector).animate(
         { opacity: 0.7, zindex: 0},
-        500,
+        1500,
         function() {
             animateBackground();
         }
