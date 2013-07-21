@@ -1,5 +1,5 @@
 var currentlyOpened = 'content-about-div';
-var currentBackgroundImage = 1;
+var currentBackgroundImage = 3;
 var px_open = '690px';
 var px_close = '167px';
 
@@ -13,12 +13,12 @@ function setAnimating(state) {
 }
 
 function animateBackground() {
-    var currentBackgroundSelector = '.dynamic-background-' + currentBackgroundImage;
-    $(currentBackgroundSelector).animate(
-        { marginTop: -500},
-        60000,
-        "linear"
-    );
+    // var currentBackgroundSelector = '.dynamic-background-' + currentBackgroundImage;
+    // $(currentBackgroundSelector).animate(
+    //     { marginTop: -500},
+    //     60000,
+    //     "linear"
+    // );
 }
 
 function changeBackground() {
@@ -33,10 +33,12 @@ function changeBackground() {
         1500
     );
 
-    if (currentBackgroundImage == 3) {
+    if (currentlyOpened == 'content-about-div') {
+        currentBackgroundImage = 3;
+    } else if (currentlyOpened == 'content-tech-div') {
         currentBackgroundImage = 1;
-    } else {
-        currentBackgroundImage++;
+    } else if (currentlyOpened == 'content-arts-div' ) {
+        currentBackgroundImage = 2;
     }
 
     // set current backgorund opacity to 1
