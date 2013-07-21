@@ -138,21 +138,21 @@ h1 {
 }
 
 .content-about-div {
-    width: 43.125em;
+    width: 54%;
     height: 100%;
     display: inline-block;
     vertical-align: text-top;
 }
 
 .content-tech-div {
-    width: 9.813em;
+    width: 12.5%;
     height: 100%;
     display: inline-block;
     vertical-align:text-top;    
 }
 
 .content-arts-div {
-    width: 3.563em;
+    width: 4%;
     height: 100%;
     display: inline-block;
     vertical-align:text-top;    
@@ -180,12 +180,13 @@ p {
 }
 
 .content-text {
-    color: #cccccc;
-    width: 100%;
-    font-family: "Roboto";
-    font-size: 1em;
-    line-height: 1.563em;
     position: absolute;
+    color: #aaa;
+    width: 70%;
+    font-family: "BenchNine";
+    font-size: 1.5em;
+    line-height: 1.2em;
+    text-align: justify;
 }
 
 .content-about-div > .content-details {
@@ -209,6 +210,6 @@ p {
 }
 
 .about-content-image {
-    margin-top: 8em;
+    margin-top: 3em;
     float: right;
 }

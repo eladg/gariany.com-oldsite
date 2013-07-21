@@ -1,7 +1,7 @@
 var currentlyOpened = 'content-about-div';
 var currentBackgroundImage = 3;
-var px_open = '690px';
-var px_close = '167px';
+var px_open = '54%';
+var px_close = '1px';
 
 var isAnimating;
 function setAnimating(state) {
@@ -13,12 +13,12 @@ function setAnimating(state) {
 }
 
 function animateBackground() {
-    // var currentBackgroundSelector = '.dynamic-background-' + currentBackgroundImage;
-    // $(currentBackgroundSelector).animate(
-    //     { marginTop: -500},
-    //     60000,
-    //     "linear"
-    // );
+    var currentBackgroundSelector = '.dynamic-background-' + currentBackgroundImage;
+    $(currentBackgroundSelector).animate(
+        { marginTop: -500},
+        60000,
+        "linear"
+    );
 }
 
 function changeBackground() {

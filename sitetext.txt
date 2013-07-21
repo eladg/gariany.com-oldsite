@@ -2,11 +2,17 @@
 
 ## about
 
-My name is Elad Gariany, born at Nevember 1986, Israel. I'm a technophile, finding creation as art. I grew up as a music producer and composer, working 24/7 around computers, which turned to be my profession and passion in life. With my background in the music industry I found social networks, business and signal processing subject fascinating.
+I'm Elad Gariany, born at Nevember 1986, Tel-Aviv, Israel. I'm a technophile, finding creation as art. I grew up as a music producer and composer, working 24/7 around computers, which turned to be my profession and passion in life. With my background in the music industry I found social networks, business and signal processing subject fascinating.
+
+shouts:
 
 ## technology
 
-After serving the israeli army and 2.5 years into my computer science degree, I co-founded Vidit.fm (2011), a  video platform for the creation of crowd-sourced videos. As the Product & CTO, I developed all mobile & backend interfaces. From that day, building products is my day job.
+After serving the israeli army and 2.5 years into my computer science degree, I co-founded Vidit.fm (2011), a video platform for the creation of crowd-sourced videos. As the Product & CTO, I developed all mobile & backend interfaces. I put special attention on audio signal processing, FFmpeg and AVFoundation libraries.
+
+Create new crowd-source video on Vidit.fm: 
+
+Building products is my day job.
 
 ## arts
 
