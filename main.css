@@ -57,38 +57,29 @@ table {
 
 .background-continer {
     position: fixed;
-    width: 100%;
+    overflow: hidden;
     height: 100%;
-    background-color: transparent;
+    width: 100%;
+    background-color: black;
 } 
 
 .background {
-    position: relative;
     width: inherit;
     height: inherit;
-    background: black;
-}
-
-.black {
-    position: fixed;
-    width: inherit;
-    height: inherit;
-    background-color: black;
-    opacity: 0.7;
-}
-
-.dynamic-background-3 {
-    position: absolute;
-    width: 110%;
-    margin-top: -6.250em;
-    opacity: 0.7;
 }
 
 .dynamic-background-1, .dynamic-background-2 {
-    position: absolute;
-    width: 110%;
+    position: fixed;
+    width: 100%;
     margin-top: -6.250em;
     opacity: 0;
+}
+
+.dynamic-background-3 {
+    position: fixed;
+    width: 100%;
+    margin-top: -6.250em;
+    opacity: 1;
 }
 
 /******************************************************************************************
@@ -96,15 +87,16 @@ table {
 ******************************************************************************************/
 
 .content-top {
-    margin-left: 5em;
-    margin-top: 10em;
-    margin-bottom: 6.25em;
+    position: absolute;
+    top: 20%;
+    left: 5em;
 }
 
 h1 {
     font-size: 2.75em;
     font-family: "Fauna One";
-    color: #8f8f8f;
+    color: #AfAfAf;
+    text-shadow: 2px 2px 10px #000000;
 }
 
 
@@ -115,13 +107,16 @@ h1 {
 
 .content {
     position: fixed;
+    overflow: hidden;
     width: 100%;
     height: 100%;
 }
 
 .content-divs {
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    height: 60%;
     margin-left: 3.563em;
     vertical-align:text-top;
 }
@@ -145,7 +140,7 @@ h1 {
 }
 
 .content-tech-div {
-    width: 12.5%;
+    width: 12.25%;
     height: 100%;
     display: inline-block;
     vertical-align:text-top;    
@@ -165,6 +160,7 @@ h2 {
     display: inline-block;     
     margin-top: 0;
     margin-bottom: 0.5em;
+    text-shadow: 1px 1px 8px #111;
 }
 
 h2:hover {
@@ -180,9 +176,8 @@ p {
 }
 
 .content-text {
-    position: absolute;
     color: #aaa;
-    width: 70%;
+    width: 100%;
     font-family: "BenchNine";
     font-size: 1.5em;
     line-height: 1.2em;
@@ -190,23 +185,21 @@ p {
 }
 
 .content-about-div > .content-details {
-    position: relative;
     opacity: 1;
-    width: auto;
-    height: 100%;
 }
 
 .content-details {
     position: relative;
     opacity: 0;
-    width: auto;
+    width: 100%;
     height: 100%;
 }
 
 .content-images {
-    position: relative;
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    top: 0;
+    height: inherit;
+    width: inherit;
 }
 
 .about-content-image {

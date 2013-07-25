@@ -13,12 +13,12 @@ function setAnimating(state) {
 }
 
 function animateBackground() {
-    var currentBackgroundSelector = '.dynamic-background-' + currentBackgroundImage;
-    $(currentBackgroundSelector).animate(
-        { marginTop: -500},
-        60000,
-        "linear"
-    );
+    // var currentBackgroundSelector = '.dynamic-background-' + currentBackgroundImage;
+    // $(currentBackgroundSelector).animate(
+    //     { marginTop: -500},
+    //     60000,
+    //     "linear"
+    // );
 }
 
 function changeBackground() {
@@ -45,7 +45,7 @@ function changeBackground() {
     var backgroundSelector = '.dynamic-background-' + currentBackgroundImage;
     console.log("backgroundSelector = " + backgroundSelector);
     $(backgroundSelector).animate(
-        { opacity: 0.7, zindex: 0},
+        { opacity: 1, zindex: 0},
         1500,
         function() {
             animateBackground();
@@ -141,6 +141,9 @@ function toggleOpenSection(sender) {
 }
 
 $(document).ready(function() {
+
+    console.log($(window).height());
+    console.log($(window).width());
 
     animateBackground();
 
