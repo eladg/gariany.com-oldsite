@@ -133,13 +133,15 @@ h1 {
 }
 
 .content-about-div {
+    position: static;
     width: 54%;
     height: 100%;
     display: inline-block;
     vertical-align: text-top;
 }
 
-.content-tech-div {
+.content-tech-div {    
+    position: static;
     width: 12.25%;
     height: 100%;
     display: inline-block;
@@ -147,6 +149,7 @@ h1 {
 }
 
 .content-arts-div {
+    position: static;    
     width: 4%;
     height: 100%;
     display: inline-block;
@@ -179,7 +182,7 @@ p {
     color: #aaa;
     width: 100%;
     font-family: "BenchNine";
-    font-size: 1.5em;
+    font-size: 1.2em;
     line-height: 1.2em;
     text-align: justify;
 }
@@ -196,13 +199,64 @@ p {
 }
 
 .content-images {
-    position: absolute;
-    top: 0;
     height: inherit;
     width: inherit;
+    vertical-align: bottom;
 }
 
 .about-content-image {
     margin-top: 3em;
     float: right;
+}
+
+#emailme {
+    position: absolute;
+    top: .9em;
+    left: 1.3em;
+}
+
+#elad_g {
+    position: absolute;
+    top: 12px;
+}
+
+#arr1 {
+    position: absolute;
+    top: .9em;
+    left: 0;
+}
+
+#arr2 {
+    position: absolute;
+    top: 27px;
+}
+
+#arr3 {
+    position: absolute;
+    top: 45px;
+    left: 35px;
+}
+
+#arr4 {
+    position: absolute;
+    top: 58px;
+    left: 70px;
+}
+
+#arr5 {
+    position: absolute;
+    top: 100px;
+    left: 75px;
+}
+
+/*********************************************/
+/* content-images: Network Profiles Pictures */
+/*********************************************/
+
+#gmail,#twitter,#linkedin,#facebook,#googlep {
+    width: 75px;
+    height: 75px;
+    vertical-align: bottom;
+    position: relative;
+    top: 8em;
 }

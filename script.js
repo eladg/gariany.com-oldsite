@@ -12,6 +12,26 @@ function setAnimating(state) {
     }
 }
 
+function setDivsWidth() {
+
+    // I'm well aware that this is really wrong, but well, i'm still a total HTML/CSS/JS newbie
+    var techDivSelector = ".content-tech-div";
+    var artsDivSelector = ".content-arts-div";
+
+    var techTitleSelector = techDivSelector + " > h2";
+    var artsTitleSelector = artsDivSelector + " > h2";
+
+    px_title_tech = $(techTitleSelector).css('width');
+    px_title_arts = $(artsTitleSelector).css('width');
+
+    console.log("width px_title_tech: " + px_title_tech);
+    console.log("width px_title_arts: " + px_title_arts);
+
+    $(techDivSelector).css('width', px_title_tech);
+    $(artsDivSelector).css('width', px_title_arts);
+
+}
+
 function animateBackground() {
     // var currentBackgroundSelector = '.dynamic-background-' + currentBackgroundImage;
     // $(currentBackgroundSelector).animate(
@@ -142,10 +162,8 @@ function toggleOpenSection(sender) {
 
 $(document).ready(function() {
 
-    console.log($(window).height());
-    console.log($(window).width());
-
     animateBackground();
+    setDivsWidth();
 
     $('.content-about-div').mouseover(function() {
         toggleOpenSection('content-about-div');
