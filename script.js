@@ -99,6 +99,11 @@ function loadSectionDetails(section) {
 
 }
 
+function aboutIconAnimationEnded(sender) {
+    console.log("in aboutIconAnimationEnded");
+    console.log(sender);
+}
+
 function toggleOpenSection(sender) {
     if (sender == currentlyOpened) {
         console.log("Already opened...");
@@ -165,6 +170,12 @@ $(document).ready(function() {
     animateBackground();
     setDivsWidth();
 
+    // debug:
+    $('.content-top > h1').mouseover(function() {
+        console.log('in mouseover');
+        toggleOpenSection('content-tech-div');
+    });
+
     $('.content-about-div').mouseover(function() {
         toggleOpenSection('content-about-div');
     });
@@ -176,5 +187,24 @@ $(document).ready(function() {
     $('.content-arts-div').mouseover(function() {
         toggleOpenSection('content-arts-div');
     });
+
+    $('.about-icon').mouseover(function() {
+        $(this).animate(
+            { top: 0},
+            100,
+            "swing"
+        );
+
+    });
+
+    $('.about-icon').mouseleave(function() {
+        $(this).animate(
+            { top: 4},
+            400,
+            "swing",
+            aboutIconAnimationEnded(this)
+        );
+    });
+
 
 });

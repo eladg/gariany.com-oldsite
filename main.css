@@ -107,18 +107,19 @@ h1 {
 
 .content {
     position: fixed;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     width: 100%;
     height: 100%;
 }
 
 .content-divs {
     position: absolute;
-    bottom: 0;
     width: inherit;
-    height: 60%;
+    bottom: 0;
+    top: 45%;
     margin-left: 3.563em;
-    vertical-align:text-top;
+    vertical-align: text-top;
 }
 
 .content-vertical-line {
@@ -135,7 +136,7 @@ h1 {
 .content-about-div {
     position: static;
     width: 54%;
-    height: 100%;
+    height: 22em;
     display: inline-block;
     vertical-align: text-top;
 }
@@ -143,7 +144,7 @@ h1 {
 .content-tech-div {    
     position: static;
     width: 12.25%;
-    height: 100%;
+    height: 22em;
     display: inline-block;
     vertical-align:text-top;    
 }
@@ -151,7 +152,7 @@ h1 {
 .content-arts-div {
     position: static;    
     width: 4%;
-    height: 100%;
+    height: 22em;
     display: inline-block;
     vertical-align:text-top;    
 }
@@ -168,6 +169,7 @@ h2 {
 
 h2:hover {
     color: #b1b1b1;
+    cursor: pointer;
 }
 
 /******************************************************************************************
@@ -199,9 +201,16 @@ p {
 }
 
 .content-images {
+    position: relative;
     height: inherit;
     width: inherit;
     vertical-align: bottom;
+}
+
+.networks-icons {
+    position: relative;
+    top: 3em;
+    text-align: right;
 }
 
 .about-content-image {
@@ -209,54 +218,18 @@ p {
     float: right;
 }
 
-#emailme {
-    position: absolute;
-    top: .9em;
-    left: 1.3em;
-}
-
-#elad_g {
-    position: absolute;
-    top: 12px;
-}
-
-#arr1 {
-    position: absolute;
-    top: .9em;
-    left: 0;
-}
-
-#arr2 {
-    position: absolute;
-    top: 27px;
-}
-
-#arr3 {
-    position: absolute;
-    top: 45px;
-    left: 35px;
-}
-
-#arr4 {
-    position: absolute;
-    top: 58px;
-    left: 70px;
-}
-
-#arr5 {
-    position: absolute;
-    top: 100px;
-    left: 75px;
-}
-
 /*********************************************/
 /* content-images: Network Profiles Pictures */
 /*********************************************/
 
-#gmail,#twitter,#linkedin,#facebook,#googlep {
-    width: 75px;
-    height: 75px;
-    vertical-align: bottom;
+.about-icon {
     position: relative;
-    top: 8em;
+    top: 4px;
+    padding: 0.2em;
+    border-width: 10px;
+    border-color: black;
+}
+
+.about-icon:last-child {
+    right: 3%;
 }
