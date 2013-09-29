@@ -3,6 +3,11 @@ var currentBackgroundImage = 3;
 var px_open = '54%';
 var px_close = '1px';
 
+var backgroundImagesUrls = {};
+backgroundImagesUrls['about'] = 'img/background3.png';
+backgroundImagesUrls['tech'] = 'img/background1.png';
+backgroundImagesUrls['arts'] = 'img/background2.png';
+
 var isAnimating;
 function setAnimating(state) {
     if (state === true) {
@@ -10,26 +15,6 @@ function setAnimating(state) {
     } else {
         isAnimating = false;
     }
-}
-
-function setDivsWidth() {
-
-    // I'm well aware that this is really wrong, but well, i'm still a total HTML/CSS/JS newbie
-    var techDivSelector = ".content-tech-div";
-    var artsDivSelector = ".content-arts-div";
-
-    var techTitleSelector = techDivSelector + " > h2";
-    var artsTitleSelector = artsDivSelector + " > h2";
-
-    px_title_tech = $(techTitleSelector).css('width');
-    px_title_arts = $(artsTitleSelector).css('width');
-
-    console.log("width px_title_tech: " + px_title_tech);
-    console.log("width px_title_arts: " + px_title_arts);
-
-    $(techDivSelector).css('width', px_title_tech);
-    $(artsDivSelector).css('width', px_title_arts);
-
 }
 
 function animateBackground() {
@@ -41,36 +26,50 @@ function animateBackground() {
     // );
 }
 
-function changeBackground() {
-    console.log("in changeBackground");
-    var backgroundSelector = '.dynamic-background-' + currentBackgroundImage;
-
-    $(backgroundSelector).stop();
-    console.log("backgroundSelector = " + backgroundSelector);
-    // set current backgorund opacity to 0
-    $(backgroundSelector).animate(
-        { opacity: 0},
-        1500
-    );
-
-    if (currentlyOpened == 'content-about-div') {
-        currentBackgroundImage = 3;
-    } else if (currentlyOpened == 'content-tech-div') {
-        currentBackgroundImage = 1;
-    } else if (currentlyOpened == 'content-arts-div' ) {
-        currentBackgroundImage = 2;
+function changeBackground(openedSegment) {
+    
+    if (openedSegment == currentlyOpened) {
+        console.log("Already opened...");
+        return;
     }
 
-    // set current backgorund opacity to 1
-    var backgroundSelector = '.dynamic-background-' + currentBackgroundImage;
-    console.log("backgroundSelector = " + backgroundSelector);
-    $(backgroundSelector).animate(
-        { opacity: 1, zindex: 0},
-        1500,
-        function() {
-            animateBackground();
-        }
-    );
+    console.log("in changeBackground");
+    var backgroundSelector = '.background-continer';
+    var backgroundImageUrl = backgroundImagesUrls[openedSegment];
+
+    console.log("Now on: " + openedSegment);
+    console.log("will switch to: " + backgroundImageUrl);
+
+    var callbackBackgroundChange = function() {
+        // set current backgorund opacity to 0
+        $(backgroundSelector).css("background-image", "url("+backgroundImageUrl+")");
+        
+        $(backgroundSelector).animate(
+            { opacity: 1},
+            200
+        );
+    };
+
+    $(backgroundSelector).animate({ opacity: 0 }, 1000, callbackBackgroundChange);
+
+    // if (currentlyOpened == 'content-about-div') {
+    //     currentBackgroundImage = 3;
+    // } else if (currentlyOpened == 'content-tech-div') {
+    //     currentBackgroundImage = 1;
+    // } else if (currentlyOpened == 'content-arts-div' ) {
+    //     currentBackgroundImage = 2;
+    // }
+
+    // // set current backgorund opacity to 1
+    // var backgroundSelector = '.dynamic-background-' + currentBackgroundImage;
+    // console.log("backgroundSelector = " + backgroundSelector);
+    // $(backgroundSelector).animate(
+    //     { opacity: 1, zindex: 0},
+    //     1500,
+    //     function() {
+    //         animateBackground();
+    //     }
+    // );
 
 }
 
@@ -88,7 +87,6 @@ function loadSectionDetails(section) {
     // ==========================================================
     var finishedAnimationBlock = function() {
         setAnimating(false);
-        changeBackground();
     };
 
     $(contentDetailsDivSelector).animate(
@@ -167,25 +165,21 @@ function toggleOpenSection(sender) {
 
 $(document).ready(function() {
 
-    animateBackground();
-    setDivsWidth();
-
-    // debug:
-    $('.content-top > h1').mouseover(function() {
-        console.log('in mouseover');
-        toggleOpenSection('content-tech-div');
-    });
+    // animateBackground();
 
     $('.content-about-div').mouseover(function() {
         toggleOpenSection('content-about-div');
+        changeBackground('about');
     });
 
     $('.content-tech-div').mouseover(function() {
         toggleOpenSection('content-tech-div');
+        changeBackground('tech');
     });
 
     $('.content-arts-div').mouseover(function() {
         toggleOpenSection('content-arts-div');
+        changeBackground('arts');
     });
 
     $('.about-icon').mouseover(function() {
