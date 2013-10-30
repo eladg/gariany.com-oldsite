@@ -14,7 +14,7 @@ function setAnimating(state) {
 
 function setDivsWidth() {
 
-    // I'm well aware that this is really wrong, but well, i'm still a total HTML/CSS/JS newbie
+    // I'm well aware that tms is really wrong, but well, i'm still a total HTML/CSS/JS newbie
     var techDivSelector = ".content-tech-div";
     var artsDivSelector = ".content-arts-div";
 
