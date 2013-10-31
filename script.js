@@ -188,23 +188,4 @@ $(document).ready(function() {
         toggleOpenSection('content-arts-div');
     });
 
-    $('.about-icon').mouseover(function() {
-        $(this).animate(
-            { top: 0},
-            100,
-            "swing"
-        );
-
-    });
-
-    $('.about-icon').mouseleave(function() {
-        $(this).animate(
-            { top: 4},
-            400,
-            "swing",
-            aboutIconAnimationEnded(this)
-        );
-    });
-
-
 });

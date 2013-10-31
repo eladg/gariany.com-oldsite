@@ -1,54 +1,9 @@
-/******************************************************************************************
-    CSS RESET
-******************************************************************************************/
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
 body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica";
+    font-size: 1em;
+    color: #aaa;
 }
 
 $pad: 20px;
@@ -104,6 +59,11 @@ $pad: 20px;
   }
 }
 
+a:link {color:#7d7e84; text-decoration:none; }      /* unvisited link */
+a:visited {color:#7d7e84;}   /* visited link */
+a:hover {color:#0084af;}     /* mouse over link */
+a:active {color:#7d7e84;}    /* selected link */
+
 /******************************************************************************************
    BACKGROUND SECTION
 ******************************************************************************************/
@@ -141,7 +101,7 @@ $pad: 20px;
 
 .content-top {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 5em;
 }
 
@@ -152,7 +112,14 @@ h1 {
     text-shadow: 2px 2px 10px #000000;
 }
 
-
+.hi-img {
+    display: block;
+    float: left;
+    position: absolute;
+    background: url(img/elad.cir.png);
+    height: 150px;
+    width: 150px;
+}
 
 /******************************************************************************************
    CONTENT MID SECTION
@@ -170,7 +137,7 @@ h1 {
     position: absolute;
     width: inherit;
     bottom: 0;
-    top: 45%;
+    top: 35%;
     margin-left: 3.563em;
     vertical-align: text-top;
 }
@@ -241,15 +208,12 @@ h3 {
 
 p {
     margin: 0;
-}
-
-.content-text {
-    color: #aaa;
     width: 100%;
-    font-family: "BenchNine";
-    font-size: 1.2em;
     line-height: 1.2em;
-    text-align: justify;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
 }
 
 .content-about-div > .content-details {
@@ -270,11 +234,32 @@ p {
     vertical-align: bottom;
 }
 
-.myprojects-module {
+.about-contact {
+    margin-top: 2em;
     position: relative;
-    height: 10em;
-    top: 1.5em;
+    height: inherit;
+    width: inherit;
+    vertical-align: bottom;
+}
+
+.about-contact-main {
+    position: relative;
     text-align: left;
+    margin: 0;
+    line-height: 1.5em;
+    letter-spacing: 1.5px;
+}
+.about-contact-icons {
+    font-size: 1.3em;
+}
+
+.tech-profiles {
+    margin-top: 2em;
+    position: relative;
+    height: inherit;
+    width: inherit;
+    vertical-align: bottom;    
+    font-size: 1.3em;
 }
 
 .myprojects-icons {
@@ -286,7 +271,7 @@ p {
 .networks-icons {
     position: relative;
     top: 3em;
-    text-align: right;
+    text-align: left;
 }
 
 .about-content-image {
