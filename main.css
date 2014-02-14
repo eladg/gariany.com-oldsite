@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Helvetica";
-    font-size: 1em;
+    font-size: 1.2em;
     color: #aaa;
 }
 
@@ -118,8 +118,7 @@ h1 {
 
 .content {
     position: fixed;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
     width: 100%;
     height: 100%;
 }
@@ -224,6 +223,8 @@ p {
 
 .text-block {
     position: relative;
+    text-align:justify;
+    text-justify:inter-word;
     opacity: 0;
     width: 100%;
     height: 100%;
