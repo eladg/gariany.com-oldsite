@@ -18,8 +18,8 @@ function setDivsWidth() {
     var techDivSelector = ".tech-main";
     var artsDivSelector = ".arts-main";
 
-    var techTitleSelector = techDivSelector + " > h2";
-    var artsTitleSelector = artsDivSelector + " > h2";
+    var techTitleSelector = techDivSelector + " h2";
+    var artsTitleSelector = artsDivSelector + " h2";
 
     px_title_tech = $(techTitleSelector).css('width');
     px_title_arts = $(artsTitleSelector).css('width');
@@ -41,7 +41,7 @@ function changeBackground() {
     // set current backgorund opacity to 0
     $(backgroundSelector).animate(
         { opacity: 0},
-        1500
+        2000
     );
 
     if (currentlyOpened == 'about-main') {
@@ -64,16 +64,7 @@ function changeBackground() {
 
 function loadSectionDetails(section) {
 
-    // ==========================================================
-    // selectors:
-    // ==========================================================
-
-    // text text
-    var contentDetailsDivSelector   = '.' + section + ' > .text-block';
-
-    // ==========================================================
-    // callbacks:
-    // ==========================================================
+    var contentDetailsDivSelector   = '.' + section + ' .text-block';
     var finishedAnimationBlock = function() {
         setAnimating(false);
         changeBackground();
@@ -87,18 +78,11 @@ function loadSectionDetails(section) {
 
 }
 
-function aboutIconAnimationEnded(sender) {
-    // console.log("in aboutIconAnimationEnded");
-    // console.log(sender);
-}
-
 function toggleOpenSection(sender) {
     if (sender == currentlyOpened) {
-        // console.log("Already opened...");
         return;
     }
     if (isAnimating === true) {
-        // console.log("Still animating...");
         return;
     }
 
@@ -113,9 +97,9 @@ function toggleOpenSection(sender) {
     var divSenderSelector             = '.' + sender;
 
     // h2 title
-    var titleCurrentlyOpenedSelector  = '.' + currentlyOpened + ' > h2';
+    var titleCurrentlyOpenedSelector  = '.' + currentlyOpened + ' h2';
     // 
-    var textSection   = '.' + currentlyOpened + ' > .text-block';
+    var textSection   = '.' + currentlyOpened + ' .text-block';
 
     // ==========================================================
     // callbacks:
